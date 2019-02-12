@@ -9,17 +9,17 @@ require_once "iFormTokenResolver.php";
 $recordList = json_decode(file_get_contents("php://input"), true);
 $recordInfo = array_change_key_case($recordList[0]["record"], CASE_LOWER);
 
-$servername = "support97";
-$profileID = "471294"; 
-$optionlistID = "4868171";
+$servername = "XXX";
+$profileID = "XXX"; 
+$optionlistID = "XXX";
 $student_name_country = trim($recordInfo['student_name'])."_".trim($recordInfo['country']);
 $student_name_label = trim($recordInfo['student_name'])."(".trim($recordInfo['country']).")";
 
 
 
 $url = 'https://'.$servername.'.zerionsandbox.com/exzact/api/oauth/token';
-$client = 'e9dc5646e196e70e53fd1f4cff10c5d9944c5727';
-$secret = '2657ddf3a1799b174d4f26f52f0667251a99a582';
+$client = 'XXXX';
+$secret = 'XXXX';
 
 // Couldn't wrap method call in PHP 5.3 so this has to become two separate variables
 $tokenFetcher = new iFormTokenResolver($url, $client, $secret);
